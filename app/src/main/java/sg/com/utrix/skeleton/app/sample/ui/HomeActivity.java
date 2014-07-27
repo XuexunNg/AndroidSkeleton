@@ -52,7 +52,6 @@ public class HomeActivity extends Activity
                 (DrawerLayout) findViewById(R.id.drawer_layout));
 
         mImageLoader = new ImageLoader(this, R.drawable.person_image_empty)
-
                 .setFadeInImage(true);
 
     }

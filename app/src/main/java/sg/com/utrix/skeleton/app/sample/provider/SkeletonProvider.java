@@ -142,6 +142,7 @@ public class SkeletonProvider extends RESTfulContentProvider {
                     asyncQueryRequest("",
                             BASE_URL + "/page/" + pageID,
                             String.valueOf(BONES_PAGE));
+
                     return mCursor;
 
             default:

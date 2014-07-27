@@ -1,5 +1,6 @@
 package sg.com.utrix.skeleton.app.sample.io;
 
+import android.content.Context;
 import android.net.Uri;
 import android.content.ContentValues;
 import org.apache.http.HttpResponse;
@@ -13,11 +14,9 @@ import java.io.IOException;
 import sg.com.utrix.skeleton.app.sample.http.ResponseHandler;
 import sg.com.utrix.skeleton.app.sample.http.RESTfulContentProvider;
 import sg.com.utrix.skeleton.app.sample.provider.SkeletonContract.*;
-import sg.com.utrix.skeleton.app.sample.ui.HomeActivity;
 import sg.com.utrix.skeleton.app.sample.ui.PlaceholderFragment;
 
 import static sg.com.utrix.skeleton.app.sample.util.LogUtils.LOGE;
-import static sg.com.utrix.skeleton.app.sample.util.LogUtils.LOGI;
 import static sg.com.utrix.skeleton.app.sample.util.LogUtils.makeLogTag;
 
 /**
@@ -63,8 +62,6 @@ public class BonePageHandler implements ResponseHandler {
                 LOGE(TAG, "Failed to parse JSON.", e);
             }
         }
-
-        //Stop the loading animation in PlaceholderFragment. Although i dont think I should put it here
         PlaceholderFragment.mSwipeView.setRefreshing(false);
     }
 }
